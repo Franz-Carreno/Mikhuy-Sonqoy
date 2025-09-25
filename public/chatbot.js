@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatbotMessages = document.getElementById('chatbot-messages');
 
     // Backend URL
-    const backendUrl = 'http://localhost:3000/api/chatbot';
+    const backendUrl = '/api/chatbot';
 
     // Toggle chatbot window on button click
     chatbotToggle.addEventListener('click', () => {
