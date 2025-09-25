@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    font-src 'self' https://fonts.gstatic.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.gstatic.com;
+    connect-src 'self' http://localhost:3000 https://translate.googleapis.com;
+    img-src 'self' data: https://images.unsplash.com;">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimentos nutritivos para la comunidad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="#" class="nav-logo">NutriVida</a>
+            <ul class="nav-list">
+                <li><a href="#proposals" class="nav-link">Propuestas</a></li>
+                <li><a href="#recipes" class="nav-link">Recetas</a></li>
+                <li><a href="#sdg" class="nav-link">ODS</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <!-- Video de portada -->
+            <video 
+                src="videos/Video de WhatsApp 2025-09-22 a las 22.50.00_878ff3da.mp4" 
+                autoplay 
+                muted 
+                loop 
+                playsinline 
+                style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+            </video>
+            <div class="hero-content" style="position:relative;z-index:1;">
+                <h1 style="color:#f6e3a1; text-shadow: 2px 2px 8px #7c2f1b;">Propuestas de alimentos nutritivos para la comunidad</h1>
+                <p style="color:#fffbe6; text-shadow: 1px 1px 6px #7c2f1b;">Una guía para nutrir mentes y cuerpos, con recetas económicas y saludables para todos.</p>
+            </div>
+        </section>
+
+        <section id="proposals" class="content-section">
+            <h2>Mikhuy Sonqoy</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Problemática</h3>
+                        <p>En el Perú, más de 9 millones de personas viven en pobreza o pobreza extrema, lo que genera hambre, malnutrición y problemas de salud. El 40 % de niños menores de 5 años sufre anemia, sobre todo en zonas rurales y urbano-marginales, donde predominan alimentos baratos y poco nutritivos. Mientras tanto, el país desperdicia más de 12 mil toneladas de comida al año, en contraste con familias que carecen de alimentos. Además, muchas comunidades no cuentan con educación ni herramientas para preparar comidas nutritivas y económicas con los productos disponibles.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Justificación</h3>
+                        <p>La pobreza en el Perú implica no solo falta de ingresos, sino también carencia de educación alimentaria, sobre todo en zonas rurales y periféricas, lo que amplía la desigualdad.
+                        <br>Ante ello, Mikhuy Sonqoy surge como un chatbot gratuito y accesible desde celulares básicos, que ofrece recetas nutritivas y económicas.</br>
+                        <br>Su objetivo es enseñar a las familias a alimentarse mejor sin gastar más, reducir el desperdicio y convertir la alimentación en un medio de salud, ahorro y dignidad para las comunidades.</br></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Solución</h3>
+                        <p>Por eso creamos  un chatbot llamado Mikhuy Sonqoy que enseñará a las familias en situación de pobreza a preparar comidas nutritivas, económicas y sostenibles con los productos que tienen disponibles en su entorno, reduciendo el hambre y el desperdicio. Para apoyar a las familias pobres del Perú a mejorar su alimentación sin necesidad de mayores recursos económicos, reduciendo la anemia y la malnutrición.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="recipes" class="content-section">
+            <h2>Recetas económicas y nutritivas</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="/img/lentejas-caseras-foto-principal.jpg" alt="Lentejas con verduras">
+                    <div class="card-content">
+                        <h3>Lentejas Estilo Casero</h3>
+                        <p>Una receta económica y rica en hierro. Ideal para una comida completa y nutritiva.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/img/WEB-omelette-de-vegetales.jpg" alt="Omelette de vegetales">
+                    <div class="card-content">
+                        <h3>Omelette de Huevo con Vegetales</h3>
+                        <p>Una opción rápida y llena de proteínas. Perfecta para un desayuno o cena ligera.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/img/Arroz-con-Pollo-with-Brown-Rice-033-900x650-1.jpg" alt="Arroz con pollo y vegetales">
+                    <div class="card-content">
+                        <h3>Arroz Integral con Pollo y Verduras</h3>
+                        <p>Una receta versátil y económica que puedes adaptar con cualquier vegetal de temporada.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <section id="sdg" class="content-section">
+            <h2>Conectando con los Objetivos de Desarrollo Sostenible</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-image-container">
+                        <img src="/img/S_SDG_inverted_WEB-01.png" alt="Símbolo del ODS 1">
+                    </div>
+                    <div class="card-content">
+                        <h3>Fin de la Pobreza (ODS 1)</h3>
+                        <p>Una alimentación nutritiva empodera a las personas, mejorando su salud y capacidad para trabajar y aprender, rompiendo el ciclo de la pobreza.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image-container">
+                        <img src="/img/Consejos-ODS2.png" alt="Símbolo del ODS 2">
+                    </div>
+                    <div class="card-content">
+                        <h3>Hambre Cero (ODS 2)</h3>
+                        <p>Nuestro enfoque en la producción local y el acceso a alimentos económicos contribuye directamente a garantizar la seguridad alimentaria para todos.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image-container">
+                        <img src="/img/descarga.png" alt="Símbolo del ODS 3">
+                    </div>
+                    <div class="card-content">
+                        <h3>Salud y Bienestar (ODS 3)</h3>
+                        <p>Promover una nutrición adecuada es fundamental para prevenir enfermedades y mejorar la calidad de vida de las comunidades vulnerables.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2>Contacto</h2>
+            <form class="contact-form">
+                <label for="name">Nombre Completo</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+            
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 NutriRecetas. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="chatbot-container">
+        <button id="chatbot-toggle">
+            <img src="/img/12506135.png" alt="Ícono de robot" width="60" height="60">
+        </button>
+        <div id="chatbot-window">
+            <div id="chatbot-header">Chatbot de Ayuda</div>
+            <div id="chatbot-body">
+                <div id="chatbot-messages"></div>
+                <input type="text" id="chatbot-input" placeholder="Escribe tu pregunta...">
+            </div>
+        </div>
+    </div>
+    <script src="chatbot.js"></script>
+
+</body>
+</html>

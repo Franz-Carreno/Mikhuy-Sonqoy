@@ -1,0 +1,336 @@
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500&display=swap');
+
+/* Estilos generales y reset */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+/* Encabezado y Navegación */
+.main-header {
+    background-color: #b05a2c; /* Copper */
+    width: 100%;
+    position: fixed; /* Fijo en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Sombra opcional */
+    transition: background 0.3s;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #f6e3a1; /* Pale Yellow */
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-link {
+    color: #f6e3a1; /* Pale Yellow */
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #c48a4a; /* Light Golden Brown */
+}
+
+/* Sección principal (Hero) */
+.hero-section {
+    background-color: #f6e3a1; /* Pale Yellow */
+    color: #7c2f1b; /* Dark Red Copper */
+    background-image: none;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(53, 82, 59, 0.4); /* Dark Fern Green con opacidad */
+}
+
+.hero-content {
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+/* Secciones de Contenido */
+.content-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.content-section:nth-child(even) {
+  background-color: #EFEFEF; /* Un gris claro para las secciones pares */
+}
+
+.content-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Footer */
+.main-footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: #7c2f1b; /* Dark Red Copper */
+    color: #f6e3a1; /* Pale Yellow */
+}
+
+/* Chatbot (mantenemos los estilos anteriores) */
+/* Chatbot (Estilos corregidos) */
+#chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    /* Añade las siguientes líneas para asegurar el alineamiento */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinea los elementos a la derecha */
+}
+
+#chatbot-toggle {
+    background-color: #b05a2c; /* Copper */
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+#chatbot-toggle:hover {
+    transform: scale(1.1);
+}
+
+#chatbot-toggle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#chatbot-window {
+    display: none;
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#chatbot-header {
+    background: #b05a2c; /* Copper */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#chatbot-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* La clave es darle una altura del 100% */
+}
+
+#chatbot-messages {
+    flex-grow: 1; 
+    overflow-y: auto;
+    padding: 10px;
+    display: flex; /* Esto es clave para el alineamiento */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; /* Alinea los elementos al inicio (izquierda) */
+}
+
+#chatbot-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para las tarjetas de contenido */
+.card {
+    background-color: #fff;
+    border: 2px solid #a59a5f; /* Medium Khaki Green */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #b05a2c; /* Copper */
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #35523b; /* Dark Fern Green */
+}
+
+/* Estilos del formulario de contacto */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form label {
+    font-weight: 500;
+    margin-bottom: -0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-form button {
+    padding: 1rem;
+    background-color: #b05a2c; /* Copper */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #7c2f1b; /* Dark Red Copper */
+}
+
+/* Nuevos estilos para los contenedores de imagen de los ODS */
+.card-image-container {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image-container img {
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.message {
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    max-width: 80%;
+}
+
+.user {
+    background-color: #35523b; /* Dark Fern Green */
+    color: #f6e3a1; /* Pale Yellow */
+    align-self: flex-end; /* Alinea los mensajes del usuario a la derecha */
+}
+
+.bot {
+    background-color: #f6e3a1; /* Pale Yellow */
+    color: #7c2f1b; /* Dark Red Copper */
+    align-self: center; /* Cambia flex-start por center */
+}
+
+main {
+    margin-top: 90px; /* Ajusta según la altura real del header */
+}
+
